@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+@keyframes btn-anim-start {
+  from {
+    font-size: 125%;
+  }
+  to {
+    font-size: 225%;
+  }
+}
+
+#startbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 80px;
+  border: none;
+  background-color: #00000055;
+  transition: 0.75s;
+  animation: btn-anim-start 1s infinite alternate linear;
+}
+
+#startbtn:hover,
+#exitbtn:hover {
+  background-color: #f3474755;
+  transition: 0.75s;
+}
+
+#exitbtn {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  padding: 20px;
+  border-radius: 80px;
+  border: none;
+  background-color: #00000055;
+  transition: 0.75s;
+  display: none;
+}
+
+body {
+  padding: 50px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1em;
+  background: linear-gradient(200deg, #5ea8d3, #ee70dd);
+}
+
+#calculator {
+  width: 332px;
+  padding: 10px;
+  margin: auto;
+  background-color: #f2f0eb;
+  font-size: 1.2rem;
+  border: solid 1px #b5bab6;
+  border-radius: 10px;
+  box-shadow: 0px 1px 7px 0px #212121;
+  display: none;
+}
+
+#display {
+  display: grid;
+  border: solid 1px #b5b1b6;
+  border-radius: 5px;
+  height: 90px;
+  color: #212121;
+}
+
+#display input {
+  display: block;
+  text-align: right;
+  padding: 8px 7px;
+  background: none;
+  font-size: 0.9rem;
+  color: #7eb27f;
+  border: none;
+}
+
+#display output {
+  display: block;
+  text-align: right;
+  padding: 0px 5px;
+  background: none;
+  font-weight: bold;
+  font-size: 2rem;
+  overflow: auto;
+}
+
+#numpad {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding-top: 10px;
+}
+
+#numpad button {
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  font-family: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #b5b1b6;
+}
+
+#numpad button:hover {
+  background: linear-gradient(120deg, #b5bab6, #e1e3e1);
+}
+
+#numpad button.operator {
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: #994500;
+  color: #f2f0eb;
+}
+
+#numpad button.operator:hover {
+  background: linear-gradient(120deg, #212121, #009499);
+}
+
+#precision-manager {
+  margin-top: 20px;
+  width: 330px;
+}
+
+#precision-manager input {
+  width: 310px;
+}

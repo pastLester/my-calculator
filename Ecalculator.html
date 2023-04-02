@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-CALCULATOR</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <button id="startbtn">CLICK HERE TO CALCULATOR</button>
+    <button id="exitbtn">EXIT</button>
+    <main id="calculator">
+      <div class="header">
+        <h2>My Calculator</h2>
+      </div>
+      <section id="display">
+        <input type="text" id="history" value="" disabled />
+        <output name="result" id="result" for="input-text">0</output>
+      </section>
+      <section id="numpad">
+        <button data="all-clear">C</button>
+        <button data="backspace">&#8676;</button>
+        <button data="percent">%</button>
+        <button data-operator="/" class="operator">&divide;</button>
+        <button data-number="7">7</button>
+        <button data-number="8">8</button>
+        <button data-number="9">9</button>
+        <button data-operator="*" class="operator">&times;</button>
+        <button data-number="4">4</button>
+        <button data-number="5">5</button>
+        <button data-number="6">6</button>
+        <button data-operator="+" class="operator">&plus;</button>
+        <button data-number="1">1</button>
+        <button data-number="2">2</button>
+        <button data-number="3">3</button>
+        <button data-operator="-" class="operator">&minus;</button>
+        <button data="negate">&pm;</button>
+        <button data-number="0">0</button>
+        <button data="dot">&sdot;</button>
+        <button data="calculate" class="operator">&equals;</button>
+      </section>
+      <section id="precision-manager">
+        <label for="slider" id="precision-meter">Precision : 50</label>
+        <input type="range" min="10" max="1000" id="precision-range" />
+      </section>
+    </main>
+    <script src="calculator.js"></script>
+  </body>
+</html>
